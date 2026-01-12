@@ -93,8 +93,13 @@
 
 #text = "Hello, Python"
 #result = text.split(",")
-#print(result) # split - belirtilen string ifadeyi tespit edince string ifadeyi böler. Örnekte ['Hello', 'Python']
+#print(result) 
+#   -SPLIT 
+# belirtilen string ifadeyi tespit edince string ifadeyi böler. Örnekte ['Hello', 'Python']
 #çıktısı alınacaktır.
+#EK BİLGİ** split metoduna verilecek ikinci bir parametre, ilk parametrede verilen karakteri kaç kere böleceğini
+#belirler. örneğin split'e , parametresini 5 sayısı ile verirsek, bir string değerde 5 virgül boyunca bölme işlemi
+#yapar. ardından bölmeyi keser.
 
 # STRING KAÇIŞ KARAKTERLERİ
 # çift tırnaklar içinde çift tırnak veya tek tırnaklar içinde tek tırnak kullanmak istersek, çift veya tek
@@ -331,3 +336,25 @@
 # print(result) # bu çıktıda kodda replace metoduna verilen ilk parametre olan animals, fruits ile yer değiştirir.
 #EK BİLGİ** replace metoduna verilecek 3. bir parametre, ilk 2 parametrenin string ifadede kaç kere yer değiştireceğini
 #belirler. örneğin ana string ifadede 3 adet animals yazısı var ise ve 3.parametre 2 ise ilk 2 animals fruits olur.
+#   -RPARTITION
+#rpartition metodu partition ile aynı görevi görür ancak, bölmesi için verdiğimiz parametre string değeri,
+#en sağda olanını seçip böler. örneğin cümlede iki adet strawberry var, rpartition ile sağda olan strawberry
+#referans alınır öncesi ve sonra ve kendisi olarak 3 parçaya ayrılır string ifade.
+#   -RFIND
+#rfind metodu ise find metodundan farklı olarak verilen parametre string değeri, ana string değerde en sağda ki
+#halini bulur. örneğin bir string ifadede 5 kere boy kelimesi geçiyorsa, rfind değer olarak en sağda bulunan boy
+#string ifadesinin ilk harfinin index numarasını döndürür.
+#EK BİLGİ** rfind metoduna tanınacak 2. ve 3. parametreler aranacak index aralığını belirler ve rfind
+#bu iki index aralık arasında istenen string ifadenin en sağda olanını bulur.
+#   -RINDEX
+#özetle rindex rfind ile aynı mantıkta çalışır. tek fark indexte de olduğu gibi false yerine error alırız.
+#   -RSPLIT
+#split ile birebir işlevde.
+#   -SPLITLINES
+#splitlines metodu \n gördüğü yerde string değeri ayırır. yani satır satır böler.varsayılan olarak False değeri
+#atanmıştır. eğer True değeri verirsek parametre olarak, stringleri ayrı ayrı bölerken,
+# bu stringlerin \n parametrelerini de korur.
+#   -ZFILL
+#zfill metodu kendisine verilen parametre değer kadar 0 atar, ancak bunu yaparken, asıl string ifadedeki karakter
+#sayısı dahil 0 atar. örneğin ("70") strin ifadede "70"  var ise ve parametre olarak "10" verirsek,
+# 8 adet 0 + "70" olarak çıktı yapar. yani 0000000070
